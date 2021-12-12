@@ -1,10 +1,10 @@
 const path = require("path");
 
-const { readIntegerArray } = require("../util/io");
+const { readArray } = require("../util/io");
 
 const inputPath = path.join(__dirname, "input");
 
-const input = readIntegerArray(inputPath);
+const input = readArray(inputPath, (x) => parseInt(x));
 
 const output = input.filter((v, i) => v > input[i - 1]).length;
 
