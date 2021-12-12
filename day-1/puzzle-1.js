@@ -1,12 +1,11 @@
-import fs from "fs";
+const fs = require("fs");
+const path = require("path");
 
-const inputUrl = new URL("input", import.meta.url);
+const { readIntegerArray } = require("../util/io");
 
-const input = fs
-  .readFileSync(inputUrl, "utf-8")
-  .split("\n")
-  .filter((x) => !!x)
-  .map((x) => parseInt(x));
+const inputPath = path.join(__dirname, "input");
+
+const input = readIntegerArray(inputPath);
 
 const output = input.filter((v, i) => v > input[i - 1]).length;
 

@@ -1,6 +1,5 @@
 {
   "name": "advent-of-code-2021",
   "repository": "github:ben-walker/advent-of-code-2021",
-  "license": "BSD-3-Clause",
-  "type": "module"
+  "license": "BSD-3-Clause"
 }
